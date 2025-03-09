@@ -35,6 +35,9 @@ public class Blog {
         this.body = body;
     }
 
+    public Long getBlogId(){
+        return blog_Id;
+    }
     public String getTitle(){
         return title;
     }

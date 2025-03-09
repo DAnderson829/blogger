@@ -71,7 +71,12 @@ public class BlogService {
         return blogRepository.findByKeyword(keyword);
     }
 
+    public Optional<Blog> findBlogByTitle(String title){
+        return blogRepository.findByTitle(title);
+    }
 
-
+    public String toString(Blog blog){
+        return blog.getTitle() + ":                      " + blog.getCreationDate() + "\n" + blog.getBody();
+    }
 
 }

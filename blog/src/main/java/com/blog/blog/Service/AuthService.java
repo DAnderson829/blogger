@@ -11,5 +11,7 @@ public class AuthService {
         return userService.createUser(username, password);
     }
 
-    public String
+    public String login(String username, String password){
+        return userService.login(username, password);
+    }
 }

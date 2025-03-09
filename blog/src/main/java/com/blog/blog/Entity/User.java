@@ -29,6 +29,10 @@ public class User {
         this.password = password;
     }
 
+    public Long getUserId(){
+        return user_Id;
+    }
+
     public void setUsername(String username){
         this.username = username;
     }
