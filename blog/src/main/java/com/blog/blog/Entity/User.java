@@ -1,6 +1,8 @@
-package com.blog.blog;
+package com.blog.blog.Entity;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "Users")
@@ -15,6 +17,9 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Blog> blogs;
 
     public User(){
     }
